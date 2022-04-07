@@ -10,7 +10,7 @@ document.querySelector(".submit").addEventListener("click", function () {
   } else if (guess === secretNumber) {
     document.querySelector(".message").textContent = "✔Correct Guess👏";
     document.querySelector(".secret").textContent = secretNumber;
-    // document.querySelector("img").textContent = "/smile.jpeg";
+    document.querySelector("img").src = "smile.jpg";
     document.querySelector("body").style.backgroundColor = "#60b347";
     document.querySelector(".secret").style.width = "15rem";
     if (score > highScore) {
@@ -23,9 +23,10 @@ document.querySelector(".submit").addEventListener("click", function () {
         guess > secretNumber ? "📈Guessed Too High!" : "📉Guessed Too Low!";
       score--;
       document.querySelector(".score").textContent = score;
+      document.querySelector("img").src = "sad.jpeg";
     } else {
       document.querySelector(".message").textContent = "😢You lose the game!";
-      //   document.querySelector("img").textContent = "/sad.jpeg";
+      document.querySelector("img").src = "sad.jpeg";
       document.querySelector("body").style.backgroundColor = "rgb(206, 18, 18)";
       document.querySelector(".score").textContent = 0;
     }
